@@ -191,7 +191,7 @@ livenessProbe:
 ## Protéger les conteneurs à démarrage lent avec des startup probes {#define-startup-probes}
 
 Parfois, vous devez faire face à des applications legacy qui peuvent nécessiter un temps de démarrage supplémentaire lors de leur première initialisation.
-Dans de telles situations, il peut être compliqué de régler les paramètres de la liveness probe sans compromettant la réponse rapide aux blocages qui ont motivé une telle probe.
+Dans de telles situations, il peut être compliqué de régler les paramètres de la liveness probe sans compromettre la réponse rapide aux blocages qui ont motivé une telle probe.
 L'astuce est de configurer une startup probe avec la même commande, HTTP ou TCP check avec un `failureThreshold * periodSeconds` assez long pour couvrir le pire des scénarios des temps de démarrage.
 
 Ainsi, l'exemple précédent deviendrait :
